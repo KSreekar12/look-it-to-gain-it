@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Look It To Gain It – Step 2</title>
+
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Look It To Gain It</h1>
+  <p style="font-size:14px;opacity:0.85;">
+    Please review the content below before proceeding.
+  </p>
+
+  <!-- Countdown -->
+  <p id="status"></p>
+
+  <!-- Banner Ad -->
+  <div class="ad-box">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-slot="1234567890"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- Video Content (NOT forced) -->
+  <div class="ad-box">
+    <h3>Featured Video</h3>
+    <p style="font-size:14px;opacity:0.8;">
+      This video provides additional context related to the resource.
+    </p>
+
+    <video controls muted playsinline preload="auto">
+      <source src="video-ad.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <!-- Scroll notice -->
+  <div class="notice" id="notice" style="display:none">
+    ⬇ Scroll down and click Continue
+  </div>
+
+  <div class="spacer"></div>
+
+  <button id="continueBtn">Continue</button>
+
+  <!-- Footer -->
+  <footer style="margin-top:40px;font-size:13px;opacity:0.7;">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms</a> |
+    <a href="contact.html">Contact</a>
+  </footer>
+</div>
+
+<script src="timer.js"></script>
+<script>
+  const status = document.getElementById("status");
+  const btn = document.getElementById("continueBtn");
+  const notice = document.getElementById("notice");
+
+  waitThenCountdown(5, 10, status, () => {
+    notice.style.display = "block";
+    activateOnScroll(btn, "page3.html");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Look It To Gain It – Final</title>
+
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Look It To Gain It</h1>
+  <p style="font-size:14px;opacity:0.85;">
+    The requested resource is almost ready.
+  </p>
+
+  <!-- Countdown -->
+  <p id="adStatus"></p>
+
+  <!-- Ad -->
+  <div class="ad-box">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-slot="1234567890"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- Final Countdown -->
+  <p id="finalText" style="display:none">
+    <span id="finalTimer"></span>
+  </p>
+
+  <button id="getBtn">Get It</button>
+
+  <!-- Footer -->
+  <footer style="margin-top:40px;font-size:13px;opacity:0.7;">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms</a> |
+    <a href="contact.html">Contact</a>
+  </footer>
+</div>
+
+<script src="timer.js"></script>
+<script>
+  const adStatus = document.getElementById("adStatus");
+  const finalText = document.getElementById("finalText");
+  const finalTimer = document.getElementById("finalTimer");
+  const btn = document.getElementById("getBtn");
+
+  startCountdown(15, adStatus, () => {
+    finalText.style.display = "block";
+
+    startCountdown(5, finalTimer, () => {
+      btn.classList.add("active");
+      btn.onclick = () => {
+        window.location.href = "https://t.me/mystorevideos";
+      };
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 680px;
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.ad-box {
+  margin: 40px 0;
+  padding: 28px;
+  background: #1e293b;
+  border-radius: 12px;
+}
+
+.spacer {
+  height: 650px;
+}
+
+/* Buttons */
+button {
+  padding: 12px 22px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  background: #38bdf8;
+  color: #020617;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+button.active {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Notice */
+.notice {
+  margin: 14px 0;
+  font-size: 14px;
+  color: #a5f3fc;
+}
+
+/* SMALL countdown card */
+.timer-card {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  min-width: 90px;
+  padding: 6px 12px;
+  margin: 10px auto;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #020617;
+  background: #ef4444;
+}
+
+/* Fill animation */
+.timer-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #22c55e;
+  transition: width 1s linear;
+  z-index: 0;
+}
+
+.timer-text {
+  position: relative;
+  z-index: 1;
+}
