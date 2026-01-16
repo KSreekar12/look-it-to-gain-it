@@ -1,90 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Look It To Gain It – Step 1</title>
+  <title>Look It To Gain It – Welcome</title>
 
-  <!-- Google AdSense -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- AdSense script (verification only – NO ADS ON THIS PAGE) -->
   <script async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2311537617116643"
     crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 960px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+      border-radius: 28px;
+      padding: 52px 48px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    }
+
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 40px;
+      text-align: center;
+      margin: 0 0 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #c7d2fe;
+      margin-bottom: 44px;
+    }
+
+    .content p {
+      font-size: 16px;
+      line-height: 1.95;
+      margin-bottom: 18px;
+      color: #e5e7eb;
+    }
+
+    .section-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 26px;
+      margin: 46px 0 20px;
+      color: #f8fafc;
+    }
+
+    .highlight {
+      background: linear-gradient(
+        135deg,
+        rgba(56, 189, 248, 0.18),
+        rgba(14, 165, 233, 0.12)
+      );
+      border-left: 4px solid #38bdf8;
+      padding: 22px 24px;
+      border-radius: 16px;
+      margin: 34px 0;
+      color: #e0f2fe;
+      font-size: 15px;
+    }
+
+    .info-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 26px;
+      margin: 30px 0;
+    }
+
+    .info-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .info-box li {
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+
+    .progress-box {
+      margin-top: 26px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .progress-label {
+      font-size: 13px;
+      color: #c7d2fe;
+      margin-bottom: 6px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 33%;
+      height: 100%;
+      background: linear-gradient(90deg,#38bdf8,#22d3ee);
+    }
+
+    .progress-text {
+      font-size: 12px;
+      margin-top: 8px;
+      color: #94a3b8;
+    }
+
+    .continue-btn {
+      display: block;
+      width: 100%;
+      margin-top: 56px;
+      padding: 18px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 18px;
+      border: none;
+      background: linear-gradient(135deg, #38bdf8, #22d3ee);
+      color: #020617;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .continue-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(56, 189, 248, 0.45);
+    }
+
+    footer {
+      margin-top: 52px;
+      text-align: center;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 34px 26px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <div class="container">
 
   <h1>Look It To Gain It</h1>
-
-  <!-- ✅ PURPOSE TEXT (VERY IMPORTANT FOR APPROVAL) -->
-  <p style="font-size:14px;opacity:0.85;">
-    This platform shares information about referral programs, shopping offers,
-    and digital payment applications that may provide benefits such as cashback,
-    discounts, or reward points.
-  </p>
-
-  <!-- Countdown (UNCHANGED) -->
-  <p id="status"></p>
-  
-<!-- Scroll Notice (UNCHANGED) -->
-  <div class="notice" id="notice" style="display:none">
-    ⬇ Scroll down and click Continue
-  </div>
-  <!-- Ad Section (UNCHANGED) -->
-  <div class="ad-box">
-    <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-2311537617116643"
-      data-ad-slot="1234567890"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <div class="subtitle">
+    Learn about jobs, shopping deals, and smart buying — clearly and responsibly
   </div>
 
-  <!-- ✅ APPROVAL CONTENT BLOCK (ADDED) -->
-  <div class="ad-box" style="background:#0b1220;">
-    <h3>About Referral & Reward Information</h3>
-    <p style="font-size:14px;opacity:0.9;">
-      Many online shopping platforms and payment apps offer referral and reward
-      programs to users. These programs are managed entirely by the respective
-      service providers and may change at any time.
+  <div class="content">
+
+    <p>
+      Welcome to <strong>Look It To Gain It</strong>. This platform is designed to help users
+      understand how people typically explore jobs, shopping deals, affordable products,
+      and bulk buying opportunities in the digital world.
     </p>
-    <p style="font-size:14px;opacity:0.85;">
-      This website does not promise or guarantee earnings. Any rewards or benefits
-      depend on the official terms and conditions of the third-party services.
+
+    <p>
+      Many online platforms promote earning opportunities, discounts, and offers that can
+      appear attractive at first glance. However, not all opportunities are the same, and
+      understanding how they work is essential before taking action.
     </p>
+
+    <div class="highlight">
+      This website does not guarantee income, rewards, savings, or employment.
+      Information shared here is educational and depends on third-party services.
+    </div>
+
+    <!-- JOBS -->
+    <h2 class="section-title">Jobs & Employment Opportunities</h2>
+
+    <p>
+      Jobs remain one of the most searched topics online. People look for full-time roles,
+      part-time work, freelance projects, remote positions, and temporary assignments.
+      Understanding how legitimate job listings work helps users avoid confusion and risk.
+    </p>
+
+    <p>
+      Authentic job opportunities usually include clear job descriptions, defined roles,
+      official contact methods, and transparent payment terms. Offers that promise quick
+      earnings with little effort should always be approached carefully.
+    </p>
+
+    <p>
+      This platform focuses on helping users understand how to evaluate job listings,
+      recognize verified employment opportunities, and avoid misleading or unclear offers.
+    </p>
+
+    <!-- SHOPPING DEALS -->
+    <h2 class="section-title">Shopping Deals & Discount Offers</h2>
+
+    <p>
+      Shopping deals are widely promoted by online marketplaces and retail platforms.
+      Discounts may include seasonal sales, coupon codes, promotional pricing, or bundle
+      offers designed to attract buyers.
+    </p>
+
+    <p>
+      While deals can be beneficial, smart shoppers always review product details, seller
+      credibility, return policies, and final pricing before making purchases.
+    </p>
+
+    <p>
+      Understanding how shopping deals are structured helps users distinguish between
+      genuine savings and misleading promotions.
+    </p>
+
+    <!-- SMART BUYING -->
+    <h2 class="section-title">Smart Buying: Cheap, Best & Bulk Products</h2>
+
+    <p>
+      Many users search for cheap and best items online, especially for daily essentials.
+      Smart buying involves balancing affordability, quality, durability, and long-term
+      value rather than focusing only on price.
+    </p>
+
+    <p>
+      Bulk products are commonly chosen by families, resellers, and small businesses.
+      Purchasing in bulk can reduce per-unit costs, but storage space, product shelf life,
+      and actual usage must be considered.
+    </p>
+
+    <p>
+      Smart buying means planning purchases thoughtfully, comparing options, and avoiding
+      impulsive decisions.
+    </p>
+
+    <div class="info-box">
+      <ul>
+        <li>✔ Learn how job opportunities are evaluated</li>
+        <li>✔ Understand how shopping deals work</li>
+        <li>✔ Make better decisions when buying affordable products</li>
+        <li>✔ Avoid common mistakes in bulk purchasing</li>
+        <li>✔ Approach opportunities with clarity and confidence</li>
+      </ul>
+
+      <div class="progress-box">
+        <div class="progress-label">Your learning journey</div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <div class="progress-text">Step 1 of 3 – Introduction</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Transparency & Responsible Use</h2>
+
+    <p>
+      Look It To Gain It does not own or operate any job platform, shopping site, or reward
+      program. All information is shared for educational purposes only and should be verified
+      with official sources.
+    </p>
+
+    <p>
+      Thank you for taking the time to explore this guide. We hope it helps you navigate
+      jobs, deals, and smart buying opportunities with confidence and awareness.
+    </p>
+
   </div>
 
-  <!-- Spacer (UNCHANGED) -->
-  <div class="spacer"></div>
+  <button class="continue-btn" onclick="window.location.href='page2.html'">
+    Continue to Step 2
+  </button>
 
-  <!-- Continue Button (UNCHANGED) -->
-  <button id="continueBtn">Continue</button>
-
-  <!-- ✅ FOOTER (REQUIRED BY GOOGLE) -->
-  <footer style="margin-top:40px;font-size:13px;opacity:0.7;text-align:center;">
+  <footer>
     <a href="privacy.html">Privacy Policy</a> |
     <a href="terms.html">Terms</a> |
     <a href="contact.html">Contact</a>
   </footer>
 
 </div>
-
-<!-- JS LOGIC (UNCHANGED) -->
-<script src="timer.js"></script>
-<script>
-  const status = document.getElementById("status");
-  const btn = document.getElementById("continueBtn");
-  const notice = document.getElementById("notice");
-
-  waitThenCountdown(5, 10, status, () => {
-    notice.style.display = "block";
-    activateOnScroll(btn, "page2.html");
-  });
-</script>
 
 </body>
 </html>
